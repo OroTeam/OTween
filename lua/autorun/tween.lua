@@ -142,7 +142,8 @@ local function LerpVectorUnpacked(vector, from, to, t)
 	vector:SetUnpacked(lerped_vector.x, lerped_vector.y, lerped_vector.z)
 end
 
-local function LerpColor(from, to, t)
+
+function LerpColor(from, to, t)
 	return Color(
 		Lerp(from.r, to.r, t),
 		Lerp(from.g, to.g, t),
@@ -150,6 +151,7 @@ local function LerpColor(from, to, t)
 		Lerp(from.a, to.a, t)
 	)
 end
+
 
 local function LerpColorUnpacked(color, from, to, t)
 	color:SetUnpacked(
